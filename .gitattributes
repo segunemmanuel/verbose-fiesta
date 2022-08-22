@@ -2,6 +2,8 @@
 *.css linguist-vendored
 *.scss linguist-vendored
 *.blade linguist-detectable=false
+*.vue linguist-detectable=false
+*.shell linguist-detectable=false
 *.blade.php linguist-detectable=false
 CHANGELOG.md export-ignore
 
