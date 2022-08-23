@@ -7,7 +7,7 @@ trait ConsumeExternalServices{
 
  /**
   * Send requesy to anyu external service
-  *@return sdtClass|string
+  *@return \stdClass|string
   */
 
 // resolve api client to be consumed
