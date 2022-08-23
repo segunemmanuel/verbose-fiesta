@@ -1,0 +1,12 @@
+{
+    "name": "emmanuel/regres",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Emmanuel"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
