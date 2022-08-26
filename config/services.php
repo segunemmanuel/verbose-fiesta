@@ -27,6 +27,13 @@ return [
         'password_client_id' => env('MARKET_PASSWORD_CLIENT_ID'),
         'password_client_secret' => env('MARKET_PASSWORD_CLIENT_SECRET'),
     ],
+    'users' => [
+        'base_uri' => env('MARKET_BASE_URI'),
+        'client_id' => env('MARKET_CLIENT_ID'),
+        'client_secret' => env('MARKET_CLIENT_SECRET'),
+        'password_client_id' => env('MARKET_PASSWORD_CLIENT_ID'),
+        'password_client_secret' => env('MARKET_PASSWORD_CLIENT_SECRET'),
+    ],
 
     'postmark' => [
         'token' => env('POSTMARK_TOKEN'),
