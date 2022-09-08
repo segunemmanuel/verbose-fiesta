@@ -24,7 +24,7 @@ class MarketService
      */
     public function getProducts()
     {
-        return $this->makeRequest('GET','products');
+        return $this->makeRequest('GET','/products');
     }
 
     /**
@@ -33,6 +33,26 @@ class MarketService
     public function getCategories()
     {
         return $this->makeRequest('GET','categories');
+    }
+
+    /**
+     * Get by id
+     * @param integer $id
+     * @return stdClass
+     */
+    public function getProduct($id)
+    {
+        return $this->makeRequest('GET', "products/{$id}");
+    }
+
+    /**
+     * Get product category
+     * @param integer $id
+     * @return stdClass
+     */
+    public function getCategoryProduct($id)
+    {
+        return $this->makeRequest('GET', "categories/{$id}/products");
     }
 
 

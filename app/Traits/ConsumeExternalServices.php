@@ -6,6 +6,10 @@ use GuzzleHttp\Client;
 trait ConsumeExternalServices{
     /**
      * Send a request to any service
+     * @return stdClass|string
+     */
+    /**
+     * Send a request to any service
      * @return sdtClass|string
      */
     public function makeRequest($method, $requestUrl, $queryParams = [], $formParams = [], $headers = [], $hasFile = false)
@@ -48,5 +52,4 @@ trait ConsumeExternalServices{
 
         return $response;
     }
-
 }

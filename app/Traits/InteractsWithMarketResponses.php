@@ -5,27 +5,24 @@ namespace App\Traits;
 trait InteractsWithMarketResponses
 {
     /**
-     * Decode the corresponding response;
-     * @return \stdClass
+     * Decode correspondingly the response
+     * @return stdClass
      */
     public function decodeResponse($response)
     {
-        $decoded_response= json_decode($response);
-        return $decoded_response->data ?? $decoded_response;
+        $decodedResponse = json_decode($response);
+
+        return $decodedResponse->data ?? $decodedResponse;
     }
 
-
     /**
-     * Resolve when the request faills
+     * Resolve when the request failed
      * @return void
      */
     public function checkIfErrorResponse($response)
     {
-        //If the response has errors throw an exception
-        if(isset($response->error))
-        {
-            throw new \Exception("Something falied:{$response->error}");
-
+        if (isset($response->error)) {
+            throw new \Exception("Something failed: {$response->error}");
         }
     }
 }
