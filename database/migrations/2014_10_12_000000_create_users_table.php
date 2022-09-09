@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('service_id');
             $table->string('grant_type');
             $table->text('access_token');
-            $table->text('refresh_token');
+            $table->text('refresh_token')->nullable();
             $table->timestamp('token_expires_at');
             $table->rememberToken();
             $table->timestamps();

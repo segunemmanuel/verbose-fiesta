@@ -27,6 +27,18 @@ class MarketService
         return $this->makeRequest('GET','/products');
     }
 
+
+    /**
+     * Retrieve the user information from the API
+     * @return stdClass
+     */
+    public function getUserInformation()
+    {
+        return $this->makeRequest('GET', 'users/me');
+    }
+
+
+
     /**
      * Obtains the list of products cform the API
      */
