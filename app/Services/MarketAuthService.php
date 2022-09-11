@@ -119,6 +119,31 @@ class MarketAuthService
 
 
 
+    /**
+     * obtain access token from speifici code
+     * @return stdClass
+     */
+    public function getPasswordToken($username,$password)
+    {
+
+        $formParams = [
+            'grant_type' => 'password',
+            'client_id' => $this->passwordClientId,
+            'client_secret' => $this->passwordClientSecret,
+            'username' => $username,
+            'password' => $password,
+            'scope' => 'purchase-product manage-products manage-account read-general',
+        ];
+
+        $tokenData = $this->makeRequest('POST', 'oauth/token', [], $formParams);
+
+        $this->storeValidToken($tokenData, 'password');
+
+        return $tokenData;
+    }
+
+
+
 
 
 
