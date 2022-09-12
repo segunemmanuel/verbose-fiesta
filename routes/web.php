@@ -30,9 +30,25 @@ Route::get('authorization', [LoginController::class, 'authorization'])->name('au
 
 Route::get('products/{title}-{id}', [ProductController::class, 'showProduct'])->name('products.show');
 
+
+
+Route::get('products/{title}-{id}/purchase', [ProductController::class, 'buyProduct'])->name('products.buy');
+
+Route::get('products/publish', [ProductController::class, 'showPublishProductForm'])->name('products.publish');
+
+Route::post('products/publish', [ProductController::class, 'showPublishProductForm']);
+
+
+
+
 Route::get('categories/{title}-{id}/products', [CategoryProductController::class, 'showProducts'])->name('categories.products.show');
+
+
 Route::get('/home/products', 'HomeController@showProducts')->name('products');
+Route::get('/home/purchases', 'HomeController@showPurchases')->name('purchases');
 
 
+
+Route::post('products/publish', 'ProductController@publishProduct');
 
 
